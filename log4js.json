@@ -1,0 +1,39 @@
+{
+    "pm2": true,
+    "appenders": {
+      "stdout": {
+        "type": "console"
+      },
+      "default": {
+        "type": "dateFile",
+        "filename": "logs/info.log",
+        "pattern": ".yyyy-MM-dd",
+        "compress": false,
+        "alwaysIncludePattern": false,
+        "daysToKeep": 15,
+        "keepFileExt": true,
+        "layout": {
+          "type": "pattern",
+          "pattern": "%d %p %m"
+        },
+        "encoding": "utf-8"
+      },
+      "maxInfo": {
+        "type": "logLevelFilter",
+        "appender": "default",
+        "level": "trace",
+        "maxLevel": "error"
+      }
+    },
+    "categories": {
+      "default": {
+        "appenders": [
+          "stdout",
+          "maxInfo"
+        ],
+        "level": "all",
+        "enableCallStack": true
+      }
+    },
+    "replaceConsole": true
+  }

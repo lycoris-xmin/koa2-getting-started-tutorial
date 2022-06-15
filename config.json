@@ -1,0 +1,13 @@
+{
+    "application": {
+        "port": 5000
+    },
+    "mysql": {
+        "host": "119.23.78.111",
+        "port": "5833",
+        "user": "root",
+        "password": "Yt,6JhDEoaTZVFAm",
+        "database": "demo",
+        "multipleStatements": true
+    }
+}
